@@ -7,16 +7,21 @@
                 <af:gridRow height="50px" id="gr1">
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
                         <!-- Header -->
+                        <af:outputText value="First Page" id="ot1" inlineStyle="font-size:xx-large;"/>
                     </af:gridCell>
                 </af:gridRow>
                 <af:gridRow height="100%" id="gr2">
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
                         <!-- Content -->
                         <af:panelGroupLayout id="pgl2" layout="vertical">
-                            <af:inputText label="Student Name" id="it1" value="#{MyBean.studentName}"/>
-                            <af:inputText label="Student Class" id="it2" value="#{MyBean.studentClass}"/>
-                            <af:button text="Save Data in Session Scope" id="b1" action="gotoSecondPage"
-                                       actionListener="#{MyBean.onClickSaveDataBtn}"/>
+                            <af:panelFormLayout id="pfl1">
+                                <f:facet name="footer">
+                                    <af:button text="Save Data in Session &amp; goto Second Page" id="b1"
+                                               action="gotoSecondPage" actionListener="#{MyBean.onClickSaveDataBtn}"/>
+                                </f:facet>
+                                <af:inputText label="Student Name" id="it1" value="#{MyBean.studentName}"/>
+                                <af:inputText label="Student Age" id="it2" value="#{MyBean.studentAge}"/>
+                            </af:panelFormLayout>
                         </af:panelGroupLayout>
                     </af:gridCell>
                 </af:gridRow>

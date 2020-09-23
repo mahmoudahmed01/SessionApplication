@@ -7,17 +7,28 @@
                 <af:gridRow height="50px" id="gr1">
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
                         <!-- Header -->
+                        <af:outputText value="Second Page" id="ot3" inlineStyle="font-size:xx-large;"/>
                     </af:gridCell>
                 </af:gridRow>
                 <af:gridRow height="100%" id="gr2">
                     <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
                         <!-- Content -->
                         <af:panelGroupLayout id="pgl2" layout="vertical">
-                            <af:outputText value="Student Name is #{sessionScope.studentName}" id="ot1"/>
-                            <af:outputText value="Studnet Class is #{sessionScope.studentClass}" id="ot2"/>
-                            <af:button text="Read Data from Session" id="b1"
-                                       actionListener="#{MyBean.onClickReadDataBtn}"/>
-                            <af:button text="Back" id="b2" action="returntoFirstPage"/>
+                            <af:panelFormLayout id="pfl1">
+                                <f:facet name="footer">
+                                    <af:panelGroupLayout id="pgl3">
+                                        <af:button text="Show Session Data" id="b1"
+                                                   actionListener="#{MyBean.onClickReadDataBtn}"/>
+                                        <af:button text="Back" id="b2" action="returntoFirstPage"/>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                                <af:panelLabelAndMessage label="Student Name" id="plam1">
+                                    <af:outputText value="#{sessionScope.studentName}" id="ot1"/>
+                                </af:panelLabelAndMessage>
+                                <af:panelLabelAndMessage label="Student Age" id="plam2">
+                                    <af:outputText value="#{sessionScope.studentAge}" id="ot2"/>
+                                </af:panelLabelAndMessage>
+                            </af:panelFormLayout>
                         </af:panelGroupLayout>
                     </af:gridCell>
                 </af:gridRow>
