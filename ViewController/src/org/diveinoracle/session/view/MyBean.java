@@ -9,7 +9,6 @@ public class MyBean {
     }
     
     String studentName;
-    String studentAge;
 
     public void setStudentName(String studentName) {
         this.studentName = studentName;
@@ -18,30 +17,19 @@ public class MyBean {
     public String getStudentName() {
         return studentName;
     }
-
-    public void setStudentAge(String studentClass) {
-        this.studentAge = studentClass;
-    }
-
-    public String getStudentAge() {
-        return studentAge;
-    }
     
 
     public void onClickSaveDataBtn(ActionEvent actionEvent) {
         // Add event code here...
-        
         SessionUtil.storeOnSession("studentName", studentName);
-        SessionUtil.storeOnSession("studentAge", studentAge);
         
     }
 
     public void onClickReadDataBtn(ActionEvent actionEvent) {
         // Add event code here...
         String studentName = (String)SessionUtil.getFromSession("studentName");
-        String studentAge = (String) SessionUtil.getFromSession("studentAge");
         
-        String msgText  = studentName + " is " + studentAge + " YO";
+        String msgText  =  "Student Name in Session is " + studentName ;
 
         FacesMessage facesMsg = new FacesMessage(msgText);
         FacesContext.getCurrentInstance().addMessage(null, facesMsg);

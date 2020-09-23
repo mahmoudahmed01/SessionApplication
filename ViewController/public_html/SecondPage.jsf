@@ -25,9 +25,6 @@
                                 <af:panelLabelAndMessage label="Student Name" id="plam1">
                                     <af:outputText value="#{sessionScope.studentName}" id="ot1"/>
                                 </af:panelLabelAndMessage>
-                                <af:panelLabelAndMessage label="Student Age" id="plam2">
-                                    <af:outputText value="#{sessionScope.studentAge}" id="ot2"/>
-                                </af:panelLabelAndMessage>
                             </af:panelFormLayout>
                         </af:panelGroupLayout>
                     </af:gridCell>

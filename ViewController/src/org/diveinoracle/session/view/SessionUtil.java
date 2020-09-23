@@ -12,7 +12,9 @@ public class SessionUtil {
     public SessionUtil() {
         super();
     }
-
+    
+    
+    //Save Data in Session
     public static void storeOnSession(String key, Object value) {
         HttpServletRequest request =
             (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
@@ -20,13 +22,14 @@ public class SessionUtil {
         session.setAttribute(key, value);
 
     }
-
+    
+    //Read Data from Session
     public static Object getFromSession(String key) {
         Map sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
         return sessionMap.get(key);
     }
 
-
+    //Remove Data from Session
     public static void removeFromSession(String key) {
         HttpServletRequest request =
             (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();

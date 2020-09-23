@@ -7,11 +7,11 @@
       <property
          name="activityId">FirstPage</property>
       <property
-         name="x">252.0</property>
+         name="x">172.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>FirstPage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">207.29883</property>
+         name="y">212.59766</property>
       <property
          name="page">/FirstPage.jsf</property>
       <property
@@ -22,11 +22,11 @@
       <property
          name="activityId">SecondPage</property>
       <property
-         name="x">482.0</property>
+         name="x">501.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>SecondPage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">208.59766</property>
+         name="y">212.89648</property>
       <property
          name="page">/SecondPage.jsf</property>
       <property
@@ -40,7 +40,7 @@
       <property
          name="fromOutcome">gotoSecondPage</property>
       <property
-         name="sdm:polyPoints">R50,293.0,206.94824,441.0,208.24707,L50</property>
+         name="sdm:polyPoints">R46,213.00424,208.74707,460.0,209.0459,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -50,6 +50,6 @@
       <property
          name="fromOutcome">returntoFirstPage</property>
       <property
-         name="sdm:polyPoints">L54,440.96927,211.74707,293.0,210.44824,R54</property>
+         name="sdm:polyPoints">L54,459.99576,216.0459,213.0,215.74707,R54</property>
    </ControlFlowCase>
 </SDM>

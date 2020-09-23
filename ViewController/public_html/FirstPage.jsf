@@ -20,7 +20,6 @@
                                                action="gotoSecondPage" actionListener="#{MyBean.onClickSaveDataBtn}"/>
                                 </f:facet>
                                 <af:inputText label="Student Name" id="it1" value="#{MyBean.studentName}"/>
-                                <af:inputText label="Student Age" id="it2" value="#{MyBean.studentAge}"/>
                             </af:panelFormLayout>
                         </af:panelGroupLayout>
                     </af:gridCell>
