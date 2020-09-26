@@ -25,6 +25,15 @@
                                 <af:panelLabelAndMessage label="Student Name" id="plam1">
                                     <af:outputText value="#{sessionScope.studentName}" id="ot1"/>
                                 </af:panelLabelAndMessage>
+                                <af:panelLabelAndMessage label="Student Name from Map" id="plam2">
+                                    <af:outputText id="ot2" value="#{sessionScope.studentAsMap.Name}"/>
+                                </af:panelLabelAndMessage>
+                                <af:panelLabelAndMessage label="Student Name from Array Indx 0" id="plam3">
+                                    <af:outputText id="ot4" value="#{sessionScope.studentAsArray[0] }"/>
+                                </af:panelLabelAndMessage>
+                                <af:panelLabelAndMessage label="Student Name from Class Obj" id="plam4">
+                                    <af:outputText id="ot5" value="#{sessionScope.studentAsObj.studentName}"/>
+                                </af:panelLabelAndMessage>
                             </af:panelFormLayout>
                         </af:panelGroupLayout>
                     </af:gridCell>
